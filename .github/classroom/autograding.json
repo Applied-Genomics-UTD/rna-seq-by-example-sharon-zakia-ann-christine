@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Is there a README",
+      "setup": "",
+      "run": "cat README.md",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}
