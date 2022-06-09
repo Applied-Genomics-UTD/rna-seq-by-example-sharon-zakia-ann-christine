@@ -47,3 +47,7 @@ hisat2 -x $IDX -f -U refs/transcripts.fa | samtools sort > refs/transcripts.bam
 
 # Index the BAM file
 samtools index refs/transcripts.bam
+
+cat question6.txt | grep Z3_region | wc -l
+cat SGD_features.tab | cut -f 2 | grep -i "ORF" | wc -l
+cat SGD_features.tab | cut -f 2 | grep Z3_region | wc -l
