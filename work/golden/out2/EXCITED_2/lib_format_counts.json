@@ -1,0 +1,21 @@
+{
+    "read_files": "[ reads/EXCITED_2_R1.fq, reads/EXCITED_2_R2.fq]",
+    "expected_format": "ISR",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 156871,
+    "num_assigned_fragments": 156871,
+    "num_frags_with_consistent_mappings": 156846,
+    "num_frags_with_inconsistent_or_orphan_mappings": 25,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 25,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 156846,
+    "SF": 0,
+    "SR": 0,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

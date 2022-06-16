@@ -1,0 +1,13 @@
+{
+	"n_targets": 92,
+	"n_bootstraps": 0,
+	"n_processed": 237018,
+	"n_pseudoaligned": 237014,
+	"n_unique": 237014,
+	"p_pseudoaligned": 100.0,
+	"p_unique": 100.0,
+	"kallisto_version": "0.45.1",
+	"index_version": 10,
+	"start_time": "Tue Jun 14 11:54:21 2022",
+	"call": "kallisto quant -i refs/kallisto.idx -o out1/EXCITED_1 reads/EXCITED_1_R1.fq reads/EXCITED_1_R2.fq"
+}

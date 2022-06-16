@@ -1,0 +1,10 @@
+{
+    "salmon_version": "0.13.1",
+    "index": "refs/salmon.idx",
+    "libType": "A",
+    "validateMappings": [],
+    "output": "out2/BORED_1",
+    "mates1": "reads/BORED_1_R1.fq",
+    "mates2": "reads/BORED_1_R2.fq",
+    "auxDir": "aux_info"
+}

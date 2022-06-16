@@ -1,0 +1,10 @@
+{
+    "salmon_version": "0.13.1",
+    "index": "refs/salmon.idx",
+    "libType": "A",
+    "validateMappings": [],
+    "output": "out2/EXCITED_3",
+    "mates1": "reads/EXCITED_3_R1.fq",
+    "mates2": "reads/EXCITED_3_R2.fq",
+    "auxDir": "aux_info"
+}
