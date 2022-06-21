@@ -2,10 +2,10 @@ DA=grinch.tar.gz
 IDX=refs/grinch-genome.fa
 his ?= hisat2 --rna-strandness R --max-intronlen 2500
 
-do:
+${DA}:
 	wget -nc http://data.biostarhandbook.com/rnaseq/data/grinch.tar.gz\
 
-up:
+${IDX}: ${DA}
 	tar zxvf ${DA}
 
 
