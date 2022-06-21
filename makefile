@@ -2,6 +2,11 @@ DA=grinch.tar.gz
 IDX=refs/grinch-genome.fa
 his ?= hisat2 --rna-strandness R --max-intronlen 2500
 
+do:
+	wget -nc http://data.biostarhandbook.com/rnaseq/data/grinch.tar.gz\
+
+up:
+	tar zxvf ${DA}
 
 
 ids:
@@ -19,7 +24,7 @@ count: idx
 	featureCounts -s 1 -a refs/grinch-annotations_3.gtf -o counts-anti.txt bam/C*.bam bam/W*.bam
 	featureCounts -s 2 -a refs/grinch-annotations_3.gtf -o counts-sense.txt bam/C*.bam bam/W*.bam
 
-gtf:
+gtf:count
 	cat refs/grinch-annotations_2.gff | awk '$$3=="gene" { print $$0}' > genes.gff
 
 tin:gtf

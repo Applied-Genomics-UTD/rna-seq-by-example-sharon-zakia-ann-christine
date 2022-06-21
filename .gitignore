@@ -1,6 +1,1 @@
-work/golden/*.bam
-work/golden/*.gz
-work/golden/bam/.
-work/golden/reads/.
-work/golden/refs/.
-./*.bam
+work/
