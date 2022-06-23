@@ -6,20 +6,20 @@ ${DA}:
 	wget -nc http://data.biostarhandbook.com/rnaseq/data/grinch.tar.gz\
 
 ${IDX}: ${DA}
-	tar zxvf ${DA}
+	tar zxvf $^ 
 
 
-ids:
+ids:${IDX}
 	parallel echo {1}{2} ::: Cranky Wicked ::: 1 2 3 > ids
 	hisat2-build ${IDX} ${IDX}
 
-idx:ids
+idxx:ids
 	mkdir -p bam
 	cat ids | parallel "${his}  -x ${IDX} -U reads/{}.fq  | samtools sort > bam/{}.bam"
 	cat ids | parallel samtools index bam/{}.bam
 
 
-count: idx
+count: idxx
 	featureCounts -a refs/grinch-annotations_3.gtf -o counts.txt bam/C*.bam bam/W*.bam
 	featureCounts -s 1 -a refs/grinch-annotations_3.gtf -o counts-anti.txt bam/C*.bam bam/W*.bam
 	featureCounts -s 2 -a refs/grinch-annotations_3.gtf -o counts-sense.txt bam/C*.bam bam/W*.bam
